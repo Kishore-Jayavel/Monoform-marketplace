@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+build/
+
+# Playwright execution outputs
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+
+# Local backup directories
+_backup_v1/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor / IDE metadata
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local

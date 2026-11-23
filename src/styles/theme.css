@@ -1,0 +1,102 @@
+:root {
+  /* Color Palette */
+  --color-bg-parchment: #F5F1E8;
+  --color-bg-sand: #EDE7DC;
+  --color-surface-white: #FFFFFF;
+  --color-surface-warm: #FAF8F4;
+  --color-accent-forest: #183B32;
+  --color-accent-forest-hover: #122B24;
+  --color-accent-forest-active: #0D201A;
+  --color-accent-terracotta: #C66B4E;
+  --color-accent-terracotta-hover: #B25A3E;
+  --color-stone: #DCD3C3;
+  --color-border-subtle: #E2DAD0;
+  --color-border-strong: #C4B9A7;
+  --color-text-charcoal: #292B27;
+  --color-text-muted: #6B6862;
+  --color-text-light: #8E8A83;
+  --color-error-bg: #FDF3F1;
+  --color-error-border: #E8A89B;
+  --color-error-text: #9E3320;
+  --color-success-bg: #EFF6F3;
+  --color-success-border: #A3C9B8;
+  --color-success-text: #134E3C;
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Garamond, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Radii & Shadows - Editorial, subtle, restrained */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --shadow-subtle: 0 1px 3px rgba(41, 43, 39, 0.05), 0 10px 25px -5px rgba(41, 43, 39, 0.04);
+  --shadow-elevated: 0 4px 12px rgba(24, 59, 50, 0.08), 0 20px 30px -10px rgba(41, 43, 39, 0.06);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-parchment);
+  color: var(--color-text-charcoal);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  touch-action: manipulation;
+  cursor: pointer;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus indicator accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-accent-forest);
+  outline-offset: 3px;
+}
+
+/* Numeric tabular formatting */
+.numeric {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
